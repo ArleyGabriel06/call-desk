@@ -1,0 +1,7 @@
+{
+  "name": "ADM_TEC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
