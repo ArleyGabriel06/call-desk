@@ -69,4 +69,20 @@ ion-menu-button {
   .footer #lbl_footer2{
     margin-left: 0.3em;
   }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  .btn-entrar a{
+    background-color: #57CC99;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 36px;
+
+    
+  }
+  .btn-entrar{
+    display: flex;
+    justify-content: center;
+  }
   
