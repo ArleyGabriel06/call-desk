@@ -1,3 +1,13 @@
+.header{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+
+  min-height: 20px;
+}
+
 ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #ffffff));
 }
@@ -85,7 +95,7 @@ ion-menu.ios ion-item {
 }
 
 ion-menu.ios ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: var(--ion-color-success);
 }
 
 ion-menu.ios ion-item ion-icon {
@@ -115,7 +125,7 @@ ion-note {
 }
 
 ion-item.selected {
-  --color: var(--ion-color-primary);
+  --color: var(--ion-color-success);
 }
 
 *{
