@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path:'home',
     loadChildren: () => import('./paginas/home/home.module').then ( m => m.HomePageModule)
+  },
+  {
+    path:'cadastro',
+    loadChildren: () => import('./paginas/cadastro/cadastro.module').then ( m => m.CadastroPageModule)
+  },
+  {
+    path:'login',
+    loadChildren: () => import('./paginas/login/login.module').then ( m => m.LoginPageModule)
   }
 ];
 
