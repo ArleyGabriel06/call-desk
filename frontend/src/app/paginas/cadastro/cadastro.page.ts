@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,9 +9,11 @@ import { ApiService } from 'src/app/api.service';
 })
 export class CadastroPage implements OnInit {
 
-  constructor(
-    public _apiService: ApiService
-  ) { }
+  constructor(public _apiService: ApiService, public nav:NavController) { }
+
+  voltar(){
+    this.nav.navigateBack(['/main']);
+  }
 
   nome: any;
   cargo: any;
@@ -31,6 +34,7 @@ export class CadastroPage implements OnInit {
       senha: this.senha,
       nivel: this.nivel,
     }
+
 
     this._apiService.addUser(data).subscribe((res:any) =>{
       console.log("Usuário Cadastrado com sucesso, ",res);

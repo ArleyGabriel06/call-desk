@@ -6,12 +6,17 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ApiService {
 
+
   constructor(
     public http: HttpClient 
   ) { }
 
   addUser(data:any){
     return this.http.post('http://localhost/call-desk/backend/cad_User.php', data);
+  }
+
+  loginUser(data:any){
+    return this.http.post('http://localhost/call-desk/backend/autenticar.php', data, {responseType: 'text'});
   }
 
 }

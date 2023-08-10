@@ -2,8 +2,6 @@
 
     include "conexao.php";
 
-    // $nivel = 2;
-
     $input = file_get_contents('php://input');
     $data = json_decode($input,true);
     $message = array();
