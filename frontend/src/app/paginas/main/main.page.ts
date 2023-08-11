@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPage implements OnInit {
 
-  constructor() { }
+  constructor(public nav: NavController) { }
+
+  entrar(){
+    this.nav.navigateForward(['/login']);
+  }
+
+  cadastrar(){
+    this.nav.navigateForward(['/cadastro']);
+  }
 
   ngOnInit() {
   }

@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/home/home.module').then ( m => m.HomePageModule)
   },
   {
+    path:'home/:id',
+    loadChildren: () => import('./paginas/home/home.module').then ( m => m.HomePageModule)
+  },
+  {
     path:'cadastro',
     loadChildren: () => import('./paginas/cadastro/cadastro.module').then ( m => m.CadastroPageModule)
   },
