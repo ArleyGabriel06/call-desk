@@ -12,7 +12,7 @@
     $senha = "";
     $database = "call-desk";
 
-    $conn = mysqli_connect($host, $user, $senha, $database);
+    $con = mysqli_connect($host, $user, $senha, $database);
 
     // if($conn){
     //     echo "Banco de Dados conectado!";

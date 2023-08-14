@@ -14,10 +14,10 @@
     $nivel = $data['nivel'];
 
 
-    $sql = "INSERT INTO usuario (nome,cod,cargo,setor,email,senha,nivel)
+    $sql = "INSERT INTO usuarios (nome,cod,cargo,setor,email,senha,nivel)
             VALUES('" . $nome . "', '" . $cod . "', '" . $cargo . "', '" . $setor . "', '" . $email . "', '" . $senha . "', '" . $nivel . "')";
         
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($con, $sql);
     // if($result){
     //     echo "Usuário Cadastrado com sucesso!";
     // } else{

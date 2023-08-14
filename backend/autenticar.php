@@ -9,9 +9,9 @@
     $email = $data['email'];
     $senha = $data['senha'];
 
-    $sql =  "SELECT * FROM usuario WHERE email = '" . $email . "' and senha = '" . $senha . " '";
+    $sql =  "SELECT * FROM usuarios WHERE email = '" . $email . "' and senha = '" . $senha . " '";
 
-    $query =  mysqli_query($conn, $sql);
+    $query =  mysqli_query($con, $sql);
 
     if(mysqli_num_rows($query) > 0){
         $data = mysqli_fetch_array($query);   

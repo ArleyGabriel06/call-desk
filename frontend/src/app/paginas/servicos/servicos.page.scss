@@ -1,0 +1,36 @@
+#voltar{
+    font-weight: bold;
+}
+ion-button{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+ion-content{
+    display: flex;
+}
+.servicos{
+    background-color: rgba(255,255,255,0.4);
+    margin: 1em;
+    border-radius: 10px;
+}
+#cadastra{
+  margin: 0.5em 5.5em 0.5em 5.5em;
+//   font-weight: bold;
+}
+.tabela ion-col {
+    background-color: #274764;
+    border: solid 1px #fff;
+    color: #fff;
+    text-align: center;
+}
+ion-grid ion-button{
+    margin-top: -0.5em;
+    margin-bottom: 0em;
+}
+.titulo ion-col{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}

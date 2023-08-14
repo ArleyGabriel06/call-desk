@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Serviços</ion-title>
+    <ion-button id="voltar" slot="end" (click)="voltar()"> Voltar </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="servicos">
+    <ion-button color="success" id="cadastra" (click)="addServico">Cadastrar Serviço</ion-button>
+    <ion-grid class="titulo">
+      <ion-row>
+        <ion-col> Nome </ion-col>
+        <ion-col> Descrição </ion-col>
+        <ion-col> Prazo </ion-col>
+        <ion-col> Editar </ion-col>
+        <ion-col> Excluir </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="tabela"  *ngFor="let servico of servicos">
+      <ion-row>
+        <ion-col> {{servico.nome}} </ion-col>
+        <ion-col> {{servico.desc}} </ion-col>
+        <ion-col> {{servico.prazo}} </ion-col>
+        <ion-col>
+            <ion-button color="transp" size="small" (click)="updateServ(servico.id_Servico)">
+              <ion-icon name="create-outline"></ion-icon>
+            </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="transp" size="small" (click)="deleteServ(servico.id_Servico)">
+            <ion-icon name="close-circle-outline" ></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

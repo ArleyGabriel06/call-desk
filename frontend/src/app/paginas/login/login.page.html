@@ -4,15 +4,15 @@
     <ion-button (click)="voltar()"><ion-icon name="caret-back-outline"></ion-icon> Voltar </ion-button>
     <form id="lista" lines="full">
       <ion-item>
-        <ion-label position="floating"> Email </ion-label>
-        <ion-input [(ngModel)]="email" name="email" type="string"></ion-input>
+        <ion-label color="light" id="label" position="floating"> Email </ion-label>
+        <ion-input color="light" [(ngModel)]="email" name="email" type="string"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating"> Senha </ion-label>
-        <ion-input [(ngModel)]="senha" name="senha" type="password"></ion-input>
+        <ion-label color="light" id="label" position="floating"> Senha </ion-label>
+        <ion-input color="light" [(ngModel)]="senha" name="senha" type="password"></ion-input>
       </ion-item>
       <ion-button id="login" expand="block" shape="round" typer="submit" (click)="loginUser()">Fazer Login</ion-button>      
     </form>
-      <h6>Esqueceu sua senha? <a > Redefinir sua senha </a></h6>   
+      <h6>Esqueceu sua senha? <a id="btn-entrar"> Redefinir sua senha </a></h6>   
   </ion-content>
 </ion-content>

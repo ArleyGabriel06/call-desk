@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path:'login',
     loadChildren: () => import('./paginas/login/login.module').then ( m => m.LoginPageModule)
+  },
+  {
+    path: 'servicos',
+    loadChildren: () => import('./paginas/servicos/servicos.module').then( m => m.ServicosPageModule)
+  },
+  {
+    path: 'update-serv/:id',
+    loadChildren: () => import('./paginas/update-serv/update-serv.module').then( m => m.UpdateServPageModule)
   }
 ];
 
