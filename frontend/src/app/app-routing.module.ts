@@ -38,6 +38,18 @@ const routes: Routes = [
   {
     path: 'update-serv/:id',
     loadChildren: () => import('./paginas/update-serv/update-serv.module').then( m => m.UpdateServPageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./paginas/user/user.module').then( m => m.UserPageModule)
+  },
+  {
+    path: 'update-user/:id',
+    loadChildren: () => import('./paginas/update-user/update-user.module').then( m => m.UpdateUserPageModule)
+  },
+  {
+    path: 'cad-user',
+    loadChildren: () => import('./paginas/cad-user/cad-user.module').then( m => m.CadUserPageModule)
   }
 ];
 

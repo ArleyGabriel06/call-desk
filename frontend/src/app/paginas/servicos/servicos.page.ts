@@ -21,6 +21,7 @@ export class ServicosPage implements OnInit {
     descricao:any;
     prazo:any;
     servicos: any=[];
+    teste: any = [];
 
   addServico(): void{
     
@@ -45,8 +46,8 @@ export class ServicosPage implements OnInit {
 
   getServicos(){
     this._apiService.getServicos().subscribe((res:any) => {
-      this.servicos = res;
-      console.log(this.servicos);
+      let result = JSON.parse(res);
+      this.servicos = result;
   },(erro:any) => {
     console.log("Erro: ",erro);})
   }
@@ -61,10 +62,11 @@ export class ServicosPage implements OnInit {
   }
 
   updateServ(id:any){
-    this.nav.navigateForward(['update-serv/' + id])
+    this.nav.navigateForward(['update-serv/' + id]);
   }
 
   ngOnInit() {
+    this.getServicos();
   }
 
 }

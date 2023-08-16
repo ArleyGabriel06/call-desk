@@ -3,48 +3,47 @@
     <ion-buttons slot="start">
       <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
-    <ion-title> Painel de Serviços</ion-title>
+    <ion-title> Painel de Usuários </ion-title>
     <ion-button id="voltar" slot="end" (click)="voltar()"> Voltar </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button color="success" id="cadastra" (click)="addServico()">Cadastrar Serviço</ion-button>
-  <ion-list class="servicos">
+<ion-content [fullscreen]="true">
+  <ion-button color="success" id="cadastra" (click)="addUser()">Cadastrar Usuário</ion-button>
+  <ion-list class="users">
     <ion-list-header class="titulo">
       <ion-row>
         <ion-col> Nome </ion-col>
-        <ion-col> Descrição </ion-col>
-        <ion-col> Prazo </ion-col>
+        <ion-col> Matricula </ion-col>
+        <ion-col> Setor </ion-col>
       </ion-row>
     </ion-list-header>
-    <ion-item-sliding *ngFor="let servico of servicos">
+    <ion-item-sliding *ngFor="let user of users">
       <ion-item-options side="start">
         <ion-item-option id="option1" color="success">
           <ion-buttons>
-            <ion-button (click)="updateServ(servico.id_Servico)">
+            <ion-button (click)="updateUser(user.id_Usuario)">
               <ion-icon slot="icon-only" name="create-outline"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-item-option>
       </ion-item-options>
-      <ion-item color="primary" class="servicos">
+      <ion-item color="primary" class="users">
         <ion-row>
-          <ion-col> {{servico.nome}} </ion-col>
-          <ion-col id="ion-col"> {{servico.desc}} </ion-col>
-          <ion-col id="ion-col"> {{servico.prazo}}h </ion-col>
+          <ion-col> {{user.nome}} </ion-col>
+          <ion-col id="ion-col"> {{user.cod}} </ion-col>
+          <ion-col> {{user.setor}} </ion-col>
         </ion-row>
       </ion-item>
       <ion-item-options side="end">
         <ion-item-option id="option2" color="danger">
           <ion-buttons>
-            <ion-button (click)="deleteServ(servico.id_Servico)">
+            <ion-button (click)="deleteUser(user.id_Usuario)">
               <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-item-option>
-      </ion-item-options>
+      </ion-item-options> 
     </ion-item-sliding>
   </ion-list>
-
 </ion-content>

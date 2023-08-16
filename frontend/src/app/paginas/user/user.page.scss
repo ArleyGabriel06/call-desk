@@ -10,20 +10,24 @@ a{
 ion-content{
     display: flex;
 }
-.servicos{
+.users{
     background-color: rgba(255,255,255,0.4);
     margin: 1em;
     border-radius: 10px;
 }
 #cadastra{
-  margin: 0.5em 6.5em 0.5em 6.5em;
+    margin: 0.5em 6.5em 0.5em 6.5em;
 //   font-weight: bold;
 }
 .tabela ion-col {
-    background-color: #274764;
+    background-color: rgba(255,255,255,0.4);
     border: solid 1px #fff;
     color: #fff;
     text-align: center;
+}
+ion-grid ion-button{
+    margin-top: -0.5em;
+    margin-bottom: 0em;
 }
 .titulo ion-col{
     color: #fff;
@@ -34,7 +38,7 @@ ion-list ion-col{
     margin: 0.2em 1em 0em 0em;
 }
 #ion-col{
-    margin: 0.2em 3em 0em 0em;
+    margin: 0.2em 3em 0em 2em;
 }
 #option1{
     width: 40px;
@@ -48,7 +52,3 @@ ion-list ion-col{
     margin: 1em 1em 1em -0.5em;
     border-radius: 5px;
 }
-// ion-item-option ion-button{
-//     width: 40px;
-//     height: 40px;
-// }
