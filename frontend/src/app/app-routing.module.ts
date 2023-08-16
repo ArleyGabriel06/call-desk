@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'cad-user',
     loadChildren: () => import('./paginas/cad-user/cad-user.module').then( m => m.CadUserPageModule)
+  },
+  {
+    path: 'homeadm',
+    loadChildren: () => import('./paginas/homeadm/homeadm.module').then( m => m.HomeadmPageModule)
   }
 ];
 
