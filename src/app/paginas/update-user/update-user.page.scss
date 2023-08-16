@@ -1,0 +1,21 @@
+ion-list{
+    margin: 1em 2em 1em 2em;
+    background-color: rgba($color: #57CC99, $alpha: 0.2);
+    border-radius: 1em;
+}
+ion-list ion-item{
+    margin: 1em 2em 1em 2em;
+}
+ion-list-header ion-label{
+    // text-align: center;
+    margin: 0em 0.3em 0em 0.3em;
+}
+ion-button{
+    margin: 0em 0.1em 0.5em 11.5em;
+}
+ion-list-header ion-label{
+    color: white;
+}
+ion-list ion-item{
+    color: white;
+}

@@ -1,0 +1,47 @@
+<ion-content class="content">
+  <ion-content class="input-content">
+    <div id="img"><img src="../../../assets/img/call-desk.png" alt="call-desk"></div>
+    <ion-button (click)="voltar()"><ion-icon name="caret-back-outline"></ion-icon> Voltar </ion-button>
+
+    <ion-list id="lista" lines="full">
+      <ion-item>
+        <ion-label position="floating"> Nome </ion-label>
+        <ion-input id="input" [(ngModel)]="nome" name="nome" type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"> Matricula </ion-label>
+        <ion-input id="input" [(ngModel)]="cod" name="cod" type="number" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"> Cargo </ion-label>
+        <ion-input id="input" [(ngModel)]="cargo" name="cargo" type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"> Setor </ion-label>
+        <ion-input id="input" [(ngModel)]="setor" name="setor" type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"> Email </ion-label>
+        <ion-input id="input" [(ngModel)]="email" name="email" type="text" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"> Senha </ion-label>
+        <ion-input id="input" [(ngModel)]="senha" name="senha" type="password" ></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button id="botao-cadastro" expand="block" shape="round" type="button" (click)="addUser()"> Cadastrar </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+    </ion-content>
+</ion-content>
+      
+    
+
+
+ 
+
+  
+
+
