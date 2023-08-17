@@ -54,6 +54,18 @@ const routes: Routes = [
   {
     path: 'homeadm',
     loadChildren: () => import('./paginas/homeadm/homeadm.module').then( m => m.HomeadmPageModule)
+  },
+  {
+    path: 'kanbanadm',
+    loadChildren: () => import('./paginas/kanbanadm/kanbanadm.module').then( m => m.KanbanadmPageModule)
+  },
+  {
+    path: 'kanban',
+    loadChildren: () => import('./paginas/kanban/kanban.module').then( m => m.KanbanPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./paginas/modal/modal.module').then( m => m.ModalPageModule)
   }
 ];
 

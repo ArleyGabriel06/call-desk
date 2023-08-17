@@ -1,0 +1,35 @@
+
+
+<ion-content [fullscreen]="true">
+  
+
+  <h1>Criar um Chamado</h1>
+
+  <form action="">
+
+    Titulo:
+    <input name="titulo" type="text">
+
+    Descrição:
+    <input type="text" name="desc" size="100">
+
+    Data:
+    <input name="data" type="date">
+
+    Hora:
+    <input name="hora" type="time">
+
+    <input class="btn_sub" type="submit" value="Enviar">
+
+  </form>
+
+
+  <ion-fab (click)="sair()" id="fab" slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button color="success">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-fab-button>
+    </ion-fab>
+
+
+  </ion-content>
+

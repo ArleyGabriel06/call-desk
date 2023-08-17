@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    
+    <ion-title>Kanban</ion-title>
+    <ion-button id="sair" slot="start" (click)="sair()"> Voltar </ion-button>
+    
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content color="secondary" [fullscreen]="true">
+  
+  
+  <a (click)="alert()">
+  <ion-card color="success">
+    <ion-card-header>
+      <ion-card-title>Para fazer</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</a>
+
+<a (click)="alert()">
+  <ion-card color="success">
+    <ion-card-header>
+      <ion-card-title>Em andamento</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</a>
+
+<a (click)="alert()">
+  <ion-card color="success">
+    <ion-card-header>
+      <ion-card-title>Completo</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</a>
+
+
+</ion-content>

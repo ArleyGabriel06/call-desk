@@ -1,10 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button color="light"></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Home ADM</ion-title>
-    <ion-button id="sair" slot="end" (click)="sair()"> Sair </ion-button>
+    
+    <ion-title>Kanban ADM</ion-title>
+    <ion-button id="sair" slot="start" (click)="sair()"> Voltar </ion-button>
+    
   </ion-toolbar>
   
 </ion-header>
@@ -15,25 +14,28 @@
   <a href="">
   <ion-card color="success">
     <ion-card-header>
-      <ion-card-title>Chamados</ion-card-title>
+      <ion-card-title>Para fazer</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      Detalhes do Chamado
-    </ion-card-content>
   </ion-card>
 </a>
-
 
 <a href="">
   <ion-card color="success">
     <ion-card-header>
-      <ion-card-title>Chamados</ion-card-title>
+      <ion-card-title>Em andamento</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      Detalhes do Chamado
-    </ion-card-content>
   </ion-card>
 </a>
+
+<a href="">
+  <ion-card color="success">
+    <ion-card-header>
+      <ion-card-title>Completo</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</a>
+
+
 
 <ion-fab id="fab" slot="fixed" vertical="bottom" horizontal="end">
   <ion-fab-button>
@@ -43,12 +45,11 @@
     <ion-fab-button color="primary">
       <ion-icon name="add-outline"></ion-icon>
     </ion-fab-button>
-    <ion-fab-button color="primary">
+    <ion-fab-button (click)="modal()" color="primary">
       <ion-icon name="create-outline"></ion-icon>
     </ion-fab-button>
     
   </ion-fab-list>
 </ion-fab>
-
 
 </ion-content>
