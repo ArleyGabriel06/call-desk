@@ -21,7 +21,7 @@ export class ApiService {
   }
 
   addServico(data:any){
-    return this.http.post('http://localhost/call-desk/backend/cad_Servico.php', data);
+    return this.http.post('http://localhost/call-desk/backend/cad_Serv.php', data, {responseType: 'text'});
   }
 
   getServicos(){
@@ -29,7 +29,7 @@ export class ApiService {
   }
 
   deleteServ(id:any){
-    return this.http.delete('http://localhost/call-desk/backend/deleteServ.php?id='+ id);
+    return this.http.delete('http://localhost/call-desk/backend/delete_Serv.php?id='+ id);
   }
 
   getServico(id:any){
@@ -37,7 +37,7 @@ export class ApiService {
   }
 
   updateServ(id:any, data:any){
-    return this.http.put('http://localhost/call-desk/backend/updateServ.php?id='+ id, data);
+    return this.http.put('http://localhost/call-desk/backend/update_Serv.php?id='+ id, data);
   }
 
   getUsers(){
@@ -45,7 +45,7 @@ export class ApiService {
   }
 
   deleteUser(id:any){
-    return this.http.delete('http://localhost/call-desk/backend/deleteUser.php?id='+ id);
+    return this.http.delete('http://localhost/call-desk/backend/delete_User.php?id='+ id);
   }
 
   getUser(id:any){
@@ -53,9 +53,11 @@ export class ApiService {
   }
 
   updateUser(id:any, data:any){
-    return this.http.put('http://localhost/call-desk/backend/updateUser.php?id='+ id, data);
+    return this.http.put('http://localhost/call-desk/backend/update_User.php?id='+ id, data);
   }
 
-
+  addChamado(data:any){
+    return this.http.post('http://localhost/call-desk/backend/cad_Cham.php', data, {responseType: 'text'});
+  }
 
 }

@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/main/main.module').then( m => m.MainPageModule)
   },
   {
-    path:'home',
-    loadChildren: () => import('./paginas/home/home.module').then ( m => m.HomePageModule)
-  },
-  {
     path:'home/:id',
     loadChildren: () => import('./paginas/home/home.module').then ( m => m.HomePageModule)
   },
@@ -52,20 +48,16 @@ const routes: Routes = [
     loadChildren: () => import('./paginas/cad-user/cad-user.module').then( m => m.CadUserPageModule)
   },
   {
-    path: 'homeadm',
+    path: 'cad-serv',
+    loadChildren: () => import('./paginas/cad-serv/cad-serv.module').then( m => m.CadServPageModule)
+  },
+  {
+    path: 'homeadm/:id',
     loadChildren: () => import('./paginas/homeadm/homeadm.module').then( m => m.HomeadmPageModule)
   },
   {
-    path: 'kanbanadm',
-    loadChildren: () => import('./paginas/kanbanadm/kanbanadm.module').then( m => m.KanbanadmPageModule)
-  },
-  {
-    path: 'kanban',
-    loadChildren: () => import('./paginas/kanban/kanban.module').then( m => m.KanbanPageModule)
-  },
-  {
-    path: 'modal',
-    loadChildren: () => import('./paginas/modal/modal.module').then( m => m.ModalPageModule)
+    path: 'cad-cham/:id',
+    loadChildren: () => import('./paginas/cad-cham/cad-cham.module').then( m => m.CadChamPageModule)
   }
 ];
 

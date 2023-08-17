@@ -23,25 +23,8 @@ export class ServicosPage implements OnInit {
     servicos: any=[];
     teste: any = [];
 
-  addServico(): void{
-    
-    let data = {
-      nome: this.nome,
-      descricao: this.descricao,
-      prazo: this.prazo,
-    }
-
-
-    this._apiService.addServico(data).subscribe((res:any) =>{
-      console.log("Serviço cadastrado, ",res);
-      this.nome='';
-      this.descricao="";
-      this.prazo="";
-      this.getServicos();
-    },(error:any)=>{
-      console.log("Erro ao cadastrar, ",error);
-    })
-
+  addServico(){
+    this.nav.navigateForward(['/cad-serv']);
   }
 
   getServicos(){

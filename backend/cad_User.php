@@ -18,9 +18,9 @@
             VALUES('" . $nome . "', '" . $cod . "', '" . $cargo . "', '" . $setor . "', '" . $email . "', '" . $senha . "', '" . $nivel . "')";
         
     $result = mysqli_query($con, $sql);
-    // if($result){
-    //     echo "Usuário Cadastrado com sucesso!";
-    // } else{
-    //     echo "Erro ao cadastrar usuário!";
-    // }
+    if($result){
+        echo "Usuário Cadastrado com sucesso!";
+    } else{
+        echo "Erro ao cadastrar usuário!";
+    }
 ?>

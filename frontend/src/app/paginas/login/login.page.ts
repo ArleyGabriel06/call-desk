@@ -35,10 +35,10 @@ export class LoginPage implements OnInit {
 
         if(mensagem === true && result.nivel === "2"){
           console.log("Usuário " + result.nome + " logado com sucesso!");
-          this.nav.navigateForward('/home');
+          this.nav.navigateForward('home/'+result.id);
         } else if (mensagem === true && result.nivel === "1"){
           console.log("Usuário Admnistrador" + result.nome + " logado com sucesso!");
-          // this.nav.navigateForward('/');
+          this.nav.navigateForward('/homeadm/'+result.id);
         }
 
 

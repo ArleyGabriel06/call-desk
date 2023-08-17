@@ -18,7 +18,8 @@ export class CadUserPage implements OnInit {
   senha: any;
   nivel: any;
 
-  constructor(public _apiService: ApiService, public nav:NavController) { }
+  constructor(public _apiService: ApiService, public nav:NavController) {
+   }
 
   voltar(){
     this.nav.navigateBack(['/user']);
@@ -35,7 +36,7 @@ export class CadUserPage implements OnInit {
       nivel: this.nivel,
     }
     this._apiService.addUser(data).subscribe((res:any) =>{
-      console.log("Usuário Cadastrado com sucesso, ",res);
+      console.log("Usuário Cadastrado com sucesso: ",res);
       this.nome='';
       this.cargo='';
       this.setor='';
@@ -43,9 +44,9 @@ export class CadUserPage implements OnInit {
       this.email='';
       this.senha='';
       this.nivel='';
-      this.nav.navigateForward(['/user']);
+      this.nav.navigateBack(['/user']);
     },(error:any)=>{
-      console.log("Erro ao cadastrar, ",error);
+      console.log("Erro ao cadastrar: ",error);
     })
   }
 
